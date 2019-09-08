@@ -1,7 +1,11 @@
 #include <iostream>
 #include "UNOmenu.h"
+#include "Cards.h"
 int main()
 {
 	UNOmenu cUnOmenu;
-	cUnOmenu.StartMenu();
+	Cards cCards;
+	//cUnOmenu.StartMenu();
+	cCards.CardReset();
+	system("Pause");
 }
