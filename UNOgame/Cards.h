@@ -97,48 +97,58 @@ public:
 			}
 			std::cout << std::endl;
 		}
-	
+
+		/*
+			--Normal cards == 0
+			--'0' Cards ==1 //Are seen as special cards because they do not have 2 time Each color only ones//
+			Color change cards normal == 2 //Card value is set to 25 to differentiate from normal cards
+			Color change cards +4 == 3 //Card value is set to 20 to differentiate from normal cards
+			Block cards = 4  //Card value is set to 50 to differentiate from normal cards
+			Reverse cards == 5 //Card value is set to 40 to differentiate from normal cards
+			+ 2 cards == 6 // //Card value is set to 30 to differentiate from normal cards
+
+
+			Blue == 0
+			Yellow == 1
+			RED == 2
+			GREEN == 3
+			Black == 4
+
+			Digit == 0 -- 9
+		  0	   1	 2		 3		 4
+		+----+---+-------+-------+--------+
+		| ID | 0 | Digit | color | Amount | //Normal Cards
+		+----+---+-------+-------+--------+
+		| ID | 1 | Digit | color | Amount | //'0' Cards
+		+----+---+-------+-------+--------+
+		| ID | 2 | Digit | color | Amount |
+		+----+---+-------+-------+--------+
+		| ID | 3 | Digit | color | Amount |
+		+----+---+-------+-------+--------+
+		| ID | 4 | Digit | color | Amount | //Block Cards
+		+----+---+-------+-------+--------+
+		| ID | 5 | Digit | color | Amount |
+		+----+---+-------+-------+--------+
+
+		*/
+	}
+	void CardTransformer(int ID)
+	{
+		if (ID >= 1 && ID <= 9)
+		{
+			//Card should be RED
+			std::cout << "Red Card" << std::endl;
+		}
+		if (ID >= 9 && ID <= 17)
+		{
+			
+		}
 	}
 private:
-	/*
-		--Normal cards == 0
-		--'0' Cards ==1 //Are seen as special cards because they do not have 2 time Each color only ones//
-		Color change cards normal == 2 //Card value is set to 25 to differentiate from normal cards
-		Color change cards +4 == 3 //Card value is set to 20 to differentiate from normal cards
-		Block cards = 4  //Card value is set to 50 to differentiate from normal cards
-		Reverse cards == 5 //Card value is set to 40 to differentiate from normal cards
-		+ 2 cards == 6 // //Card value is set to 30 to differentiate from normal cards
 	
-
-		Blue == 0
-		Yellow == 1
-		RED == 2
-		GREEN == 3
-		Black == 4
-
-		Digit == 0 -- 9
-	  0	   1	 2		 3		 4
-	+----+---+-------+-------+--------+
-  0	| ID | 0 | Digit | color | Amount | //Normal Cards
-	+----+---+-------+-------+--------+
-	| ID | 1 | Digit | color | Amount | //'0' Cards
-	+----+---+-------+-------+--------+
-	| ID | 2 | Digit | color | Amount |
-	+----+---+-------+-------+--------+
-	| ID | 3 | Digit | color | Amount |
-	+----+---+-------+-------+--------+
-	| ID | 4 | Digit | color | Amount | //Block Cards
-	+----+---+-------+-------+--------+
-	| ID | 5 | Digit | color | Amount |
-	+----+---+-------+-------+--------+
-
-	*/
-
 	int m_ArryCards[106][5]{};
 	int m_CardCounter{0};
 	int m_WidthArryCards{ 5 };
 	int m_HeightArryCards{ 60 };
-	int m_TestCounter{0};
-	
 };
 
