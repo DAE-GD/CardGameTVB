@@ -14,7 +14,6 @@ public:
 		std::cout << "2. Change Usernames" << std::endl;
 		std::cout << "" << std::endl;
 		std::cout << "Choose an number: ";
-		
 		std::cin >> tmp;
 
 		switch (tmp)
