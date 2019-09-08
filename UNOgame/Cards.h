@@ -7,6 +7,7 @@ public:
 		//Normal cards
 		m_ArryCards[0][0] = 0;
 		m_ArryCards[0][1] = 0;
+		m_ArryCards[0][2] = 1;
 	}
 private:
 	/*
@@ -28,7 +29,7 @@ private:
 		Digit == 0 -- 9
 
 	+----+---+-------+-------+--------+
-	| ID | 0 | Digit | color | Amount |
+	| ID | 0 | Digit | color | Amount | //Normal Cards
 	+----+---+-------+-------+--------+
 	| ID | 1 | Digit | color | Amount |
 	+----+---+-------+-------+--------+
