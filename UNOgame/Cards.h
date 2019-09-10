@@ -134,19 +134,51 @@ public:
 	}
 	void CardTransformer(int id)
 	{
-		if (id >= 1 && id <= 9)
-		{
-			//Card should be RED
-			std::cout << "Red Card" << std::endl;
-		}
-		if (id >= 10 && id <= 18)
-		{
-			std::cout << "Blue Card" << std::endl;
-		}
-		if (id >= 19 && id <= 27)
-		{
-			std::cout << "Yellow Card" << std::endl;
-		}
+
+		if (m_ArryCards[])
+
+
+
+
+
+
+		//if (id >= 1 && id <= 9)
+		//{
+		//	//Card should be Blue
+		//	std::cout << "Blue Card" << std::endl;
+		//}
+		//if (id >= 10 && id <= 18)
+		//{
+		//	//Card should be Yellow
+		//	std::cout << "Yellow Card" << std::endl;
+		//}
+		//if (id >= 19 && id <= 27)
+		//{
+		//	//Card should be Red
+		//	std::cout << "Red Card" << std::endl;
+		//}
+		//if (id >= 28 && id <= 36)
+		//{
+		//	//Card should be Green
+		//	std::cout << "Green Card"
+		//}
+		//if (id == 37) 
+		//{
+		//	//Blue 0
+		//}
+		//if (id == 38) 
+		//{
+		//	//Yellow 0
+		//}
+		//if (id == 39)
+		//{
+		//	//Red 0
+		//}
+		//if (id == 40) 
+		//{
+		//	//Green 0
+		//}
+
 	}
 private:
 	
