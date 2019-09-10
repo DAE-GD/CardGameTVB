@@ -135,56 +135,133 @@ public:
 	void CardTransformer(int id)
 	{
 
-		if (m_ArryCards[])
+		if (id >= 1 && id <= 9)
+		{
+			//Card should be Blue
+			std::cout << "Blue Card" << std::endl;
+		}
+		if (id >= 10 && id <= 18)
+		{
+			//Card should be Yellow
+			std::cout << "Yellow Card" << std::endl;
+		}
+		if (id >= 19 && id <= 27)
+		{
+			//Card should be Red
+			std::cout << "Red Card" << std::endl;
+		}
+		if (id >= 28 && id <= 36)
+		{
+			//Card should be Green
+			std::cout << "Green Card" std::endl;
+		}
+		if (id == 37) 
+		{
+			//Blue 0
+			std::cout << "blue 0" std::endl;
+		}
+		if (id == 38) 
+		{
+			//Yellow 0
+			std::cout << "Yellow 0" std::endl;
+		}
+		if (id == 39)
+		{
+			//Red 0
+			std::cout << "Red 0" std::endl;
+		}
+		if (id == 40) 
+		{
+			//Green 0
+			std::cout << "Green 0" std::endl;
+		}
+		if (id == 41) 
+		{
+			//Blue Block
+			std::cout << "Blue block" std::endl;
+		}
+		if (id == 42) 
+		{
+			//Yellow Block
+			std::cout << "Yellow Block" std::endl;
+		}
+		if (id == 43)
+		{
+			//Red Block
+			std::cout << "Red Block" std::endl;
+		}
+		if (id == 44)
+		{
+			//Green Block
+			std::cout << "Green block" std::endl;
+		}
+		if (id == 45)
+		{
+			//reverse card blue
+			std::cout << "Reverse Blue" std::endl;
+		}
+		if (id == 46)
+		{
+			//reverse card Yellow
+			std::cout << "Reverse Yellow" std::endl;
+		}
+		if (id == 47) 
+		{
+			//Reverse card red
+			std::cout << "Reverse red" std::endl;
+		}
+		if (id == 48)
+		{
+			//Reverse card Green
+			std::cout << "Reverse green" std::endl;
+		}
+		if (id == 49) 
+		{
+			// +2 Card blue
+			std::cout << "+2 blue" std::endl;
+		}
+		if (id == 50)
+		{
+			// +2 Card Yellow
+			std::cout << "+2 yellow" std::endl;
+		}
+		if (id == 51)
+		{
+			// +2 Card Red
+			std::cout << "+2 Red" std::endl;
+		}
+		if (id == 52)
+		{
+			// +2 Card Green
+			std::cout << "+2 Green" std::endl;
+		}
+		if (id >= 53 && id <= 56) 
+		{
+			//Normal Black color changing card
+			std::cout << "Normal Color Changing" std::endl;
+		}
+		if (id >= 57 && <= 60) 
+		{
+			//Black color changing card +4
+			std::cout << "Block color changing +4 " std::endl;
+		}
 
-
-
-
-
-
-		//if (id >= 1 && id <= 9)
-		//{
-		//	//Card should be Blue
-		//	std::cout << "Blue Card" << std::endl;
-		//}
-		//if (id >= 10 && id <= 18)
-		//{
-		//	//Card should be Yellow
-		//	std::cout << "Yellow Card" << std::endl;
-		//}
-		//if (id >= 19 && id <= 27)
-		//{
-		//	//Card should be Red
-		//	std::cout << "Red Card" << std::endl;
-		//}
-		//if (id >= 28 && id <= 36)
-		//{
-		//	//Card should be Green
-		//	std::cout << "Green Card"
-		//}
-		//if (id == 37) 
-		//{
-		//	//Blue 0
-		//}
-		//if (id == 38) 
-		//{
-		//	//Yellow 0
-		//}
-		//if (id == 39)
-		//{
-		//	//Red 0
-		//}
-		//if (id == 40) 
-		//{
-		//	//Green 0
-		//}
 
 	}
 private:
 	
-	int m_ArryCards[106][5]{};
+	int m_ArryCards[65][5]{};
 	int m_CardCounter{0};
 	int m_WidthArryCards{ 5 };
 	int m_HeightArryCards{ 60 };
 };
+
+//
+//--Normal cards == 0
+//--'0' Cards == 1 //Are seen as special cards because they do not have 2 time Each color only ones//
+//Color change cards normal == 2 //Card value is set to 25 to differentiate from normal cards
+//Color change cards + 4 == 3 //Card value is set to 20 to differentiate from normal cards
+//Block cards = 4  //Card value is set to 50 to differentiate from normal cards
+//Reverse cards == 5 //Card value is set to 40 to differentiate from normal cards
+//+ 2 cards == 6 // //Card value is set to 30 to differentiate from normal cards
 
