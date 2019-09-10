@@ -153,97 +153,97 @@ public:
 		if (id >= 28 && id <= 36)
 		{
 			//Card should be Green
-			std::cout << "Green Card" std::endl;
+			std::cout << "Green Card" << std::endl;
 		}
 		if (id == 37) 
 		{
 			//Blue 0
-			std::cout << "blue 0" std::endl;
+			std::cout << "blue 0" << std::endl;
 		}
 		if (id == 38) 
 		{
 			//Yellow 0
-			std::cout << "Yellow 0" std::endl;
+			std::cout << "Yellow 0" << std::endl;
 		}
 		if (id == 39)
 		{
 			//Red 0
-			std::cout << "Red 0" std::endl;
+			std::cout << "Red 0" <<std::endl;
 		}
 		if (id == 40) 
 		{
 			//Green 0
-			std::cout << "Green 0" std::endl;
+			std::cout << "Green 0"<< std::endl;
 		}
 		if (id == 41) 
 		{
 			//Blue Block
-			std::cout << "Blue block" std::endl;
+			std::cout << "Blue block"<< std::endl;
 		}
 		if (id == 42) 
 		{
 			//Yellow Block
-			std::cout << "Yellow Block" std::endl;
+			std::cout << "Yellow Block"<< std::endl;
 		}
 		if (id == 43)
 		{
 			//Red Block
-			std::cout << "Red Block" std::endl;
+			std::cout << "Red Block" <<std::endl;
 		}
 		if (id == 44)
 		{
 			//Green Block
-			std::cout << "Green block" std::endl;
+			std::cout << "Green block" <<std::endl;
 		}
 		if (id == 45)
 		{
 			//reverse card blue
-			std::cout << "Reverse Blue" std::endl;
+			std::cout << "Reverse Blue" <<std::endl;
 		}
 		if (id == 46)
 		{
 			//reverse card Yellow
-			std::cout << "Reverse Yellow" std::endl;
+			std::cout << "Reverse Yellow"<< std::endl;
 		}
 		if (id == 47) 
 		{
 			//Reverse card red
-			std::cout << "Reverse red" std::endl;
+			std::cout << "Reverse red"<< std::endl;
 		}
 		if (id == 48)
 		{
 			//Reverse card Green
-			std::cout << "Reverse green" std::endl;
+			std::cout << "Reverse green"<< std::endl;
 		}
 		if (id == 49) 
 		{
 			// +2 Card blue
-			std::cout << "+2 blue" std::endl;
+			std::cout << "+2 blue" <<std::endl;
 		}
 		if (id == 50)
 		{
 			// +2 Card Yellow
-			std::cout << "+2 yellow" std::endl;
+			std::cout << "+2 yellow" <<std::endl;
 		}
 		if (id == 51)
 		{
 			// +2 Card Red
-			std::cout << "+2 Red" std::endl;
+			std::cout << "+2 Red"<< std::endl;
 		}
 		if (id == 52)
 		{
 			// +2 Card Green
-			std::cout << "+2 Green" std::endl;
+			std::cout << "+2 Green"<< std::endl;
 		}
 		if (id >= 53 && id <= 56) 
 		{
 			//Normal Black color changing card
-			std::cout << "Normal Color Changing" std::endl;
+			std::cout << "Normal Color Changing"<< std::endl;
 		}
-		if (id >= 57 && <= 60) 
+		if (id >= 57 && id <= 60) 
 		{
 			//Black color changing card +4
-			std::cout << "Block color changing +4 " std::endl;
+			std::cout << "Block color changing +4 " << std::endl;
 		}
 
 

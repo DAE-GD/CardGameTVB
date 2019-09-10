@@ -152,12 +152,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cards.cpp" />
+    <ClCompile Include="PLayers.cpp" />
     <ClCompile Include="UNOgame.cpp" />
     <ClCompile Include="UNOmenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cards.h" />
+    <ClInclude Include="PLayers.h" />
     <ClInclude Include="UNOmenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UNOgame.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
