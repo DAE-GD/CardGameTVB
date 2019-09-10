@@ -132,16 +132,20 @@ public:
 
 		*/
 	}
-	void CardTransformer(int ID)
+	void CardTransformer(int id)
 	{
-		if (ID >= 1 && ID <= 9)
+		if (id >= 1 && id <= 9)
 		{
 			//Card should be RED
 			std::cout << "Red Card" << std::endl;
 		}
-		if (ID >= 9 && ID <= 17)
+		if (id >= 10 && id <= 18)
 		{
-			
+			std::cout << "Blue Card" << std::endl;
+		}
+		if (id >= 19 && id <= 27)
+		{
+			std::cout << "Yellow Card" << std::endl;
 		}
 	}
 private:
