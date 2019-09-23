@@ -1,9 +1,11 @@
 #pragma once
 #include <ostream>
 #include <iostream>
+#include "PLayers.h"
 
 class UNOmenu
 {
+	PLayers pPlayers;
 public:
 	void StartMenu()
 	{
@@ -11,7 +13,7 @@ public:
 		system("cls");
 		std::cout << "Welcome to UNO!" << std::endl;
 		std::cout << "1. Play Game" << std::endl;
-		std::cout << "2. Change Usernames" << std::endl;
+		//std::cout << "2. Change Usernames" << std::endl;
 		std::cout << "" << std::endl;
 		std::cout << "Choose an number: ";
 		std::cin >> tmp;
@@ -39,27 +41,28 @@ public:
 			system("cls");
 			std::cout << "Choose the amount of players 2-4.";
 			std::cin >> m_AmountOfPlayers;
-			std::cout << m_AmountOfPlayers << std::endl;
+			pPlayers.SetPlayerAmount(m_AmountOfPlayers);
+			std::cout << pPlayers.getPlayerAmount() << std::endl;
 			std::cout << "" << std::endl;
-			if (m_AmountOfPlayers == 2 || m_AmountOfPlayers == 3 || m_AmountOfPlayers == 4)
+			if (pPlayers.getPlayerAmount() == 2 || pPlayers.getPlayerAmount() == 3 || pPlayers.getPlayerAmount() == 4)
 			{
 				std::cout << "Please fill in the usernames" << std::endl;
-				
-				for (int i{ 0 }; i < m_AmountOfPlayers; i++)
+
+				for (int i{ 0 }; i < pPlayers.getPlayerAmount(); i++)
 				{
-					std::cout << "Name: " ;
-					std::cin >> m_Names[i];
+					std::cout << "Name: ";
+					std::cin >> m_tmpUsernam;
+					pPlayers.StoreUserNames(m_tmpUsernam, i);
 					std::cout << "" << std::endl;
 				}
 
 				std::cout << "The player names are:" << std::endl;
 
-				for (int i{ 0 }; i < m_AmountOfPlayers; i++)
+				for (int i{ 0 }; i < pPlayers.getPlayerAmount(); i++)
 				{
-					std::cout << m_Names[i];
-					std::cout << "" << std::endl;
+					std::cout << pPlayers.GetName(i) << std::endl;
 				}
-				
+
 				tmp = false;
 			}
 			else
@@ -67,20 +70,33 @@ public:
 				std::cout << "Wrong amount of players! Has to be between 2-4";
 				tmp = true;
 			}
+
+			std::cout << "" << std::endl;
+
 		}
 
 		std::cout << "" << std::endl;
 		std::cout << "Press enter to start";
 		std::cin.get();
 		std::cin.get();
+
 		system("cls");
 
 		system("Pause");
 	}
-
 	
+	void ShowPlayer()
+	{
+		pPlayers.GetTurnForPlayer();
+
+		system("cls");
+		std::cout << pPlayers.GetName(pPlayers.GetTurnForPlayer());
+		std::cout << " is on turn" << std::endl;
+		std::cout << "" << std::endl;
+	}
+
 private:
-	int m_AmountOfPlayers;
-	std::string m_Names[4]{};
+	int m_AmountOfPlayers=0;
+	std::string m_tmpUsernam;
 };
 

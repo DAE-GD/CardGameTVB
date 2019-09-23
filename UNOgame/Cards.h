@@ -1,8 +1,11 @@
 #pragma once
 #include <iostream>
+#include "PLayers.h"
 
 class Cards
 {
+	PLayers pPlayers;
+
 public:
 	void CardReset()
 	{
@@ -245,15 +248,57 @@ public:
 			//Black color changing card +4
 			std::cout << "Block color changing +4 " << std::endl;
 		}
+	}
+	void Cardshuffle()
+	{
+		for (int i = 0; i <= pPlayers.getPlayerAmount(); i++)
+		{
+			for (int x = 0; i <= 7; i++)
+			{
+				do
+				{
+					m_TmpRandomGen = GenerateID();
+					if(CheckEmptyCard(m_TmpRandomGen) == true)
+					{
+						//Make new random and check again
+						m_tmpTrueOrFalse = true;
+					}else
+					{
+						//Get out of loop. There are still cards
+						m_tmpTrueOrFalse = false;
+					}
+				} while (m_tmpTrueOrFalse == true);
 
+				m_PlayerCards[i][x] = m_TmpRandomGen;
+			}
+		}
+	}
 
+	bool CheckEmptyCard(int id)
+	{
+		if(m_ArryCards[id][4] == 0)
+		{
+			return true;
+		}else
+		{
+			return  false;
+		}
+	}
+
+	int GenerateID()
+	{
+		int r = rand() % 60 + 1;
+		return  r;
 	}
 private:
-	
+	int m_PlayerCards[4][60];
 	int m_ArryCards[65][5]{};
 	int m_CardCounter{0};
 	int m_WidthArryCards{ 5 };
 	int m_HeightArryCards{ 60 };
+	int m_TmpRandomGen = 0;
+	bool m_tmpTrueOrFalse = false;
+	
 };
 
 //
